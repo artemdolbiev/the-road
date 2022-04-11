@@ -335,6 +335,11 @@ html {
   position: relative;
   z-index: 10;
   opacity: 0.9;
+  -webkit-transition: opacity 0.4s, -webkit-transform 0.4s, -webkit-box-shadow 0.4s;
+  transition: opacity 0.4s, -webkit-transform 0.4s, -webkit-box-shadow 0.4s;
+  -o-transition: opacity 0.4s, transform 0.4s, box-shadow 0.4s;
+  transition: opacity 0.4s, transform 0.4s, box-shadow 0.4s;
+  transition: opacity 0.4s, transform 0.4s, box-shadow 0.4s, -webkit-transform 0.4s, -webkit-box-shadow 0.4s;
 }
 
 .popular-front__image {
@@ -383,6 +388,11 @@ html {
   -webkit-transform: translateZ(-50px) translateX(30px);
           transform: translateZ(-50px) translateX(30px);
   opacity: 0.5;
+  -webkit-transition: opacity 0.4s, -webkit-transform 0.4s, -webkit-box-shadow 0.4s;
+  transition: opacity 0.4s, -webkit-transform 0.4s, -webkit-box-shadow 0.4s;
+  -o-transition: opacity 0.4s, transform 0.4s, box-shadow 0.4s;
+  transition: opacity 0.4s, transform 0.4s, box-shadow 0.4s;
+  transition: opacity 0.4s, transform 0.4s, box-shadow 0.4s, -webkit-transform 0.4s, -webkit-box-shadow 0.4s;
 }
 
 .popular-back__price {
@@ -416,4 +426,21 @@ html {
   text-transform: uppercase;
   letter-spacing: 2px;
   cursor: pointer;
+}
+
+.change > .popular-front {
+  -webkit-transform: translateZ(-50px) translateX(30px);
+          transform: translateZ(-50px) translateX(30px);
+  -webkit-box-shadow: 0 20px 40px #777777;
+          box-shadow: 0 20px 40px #777777;
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.change > .popular-back {
+  -webkit-transform: translateZ(0) translateX(0);
+          transform: translateZ(0) translateX(0);
+  -webkit-box-shadow: 0 5px 20px #aaa;
+          box-shadow: 0 5px 20px #aaa;
+  opacity: 0.9;
 }
