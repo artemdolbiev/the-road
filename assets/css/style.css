@@ -680,3 +680,45 @@ html {
     background-color: #3d3d3d;
   }
 }
+
+.footer {
+  background-color: #555555;
+  padding: 40px 0 20px;
+}
+
+.footer__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer__link {
+  font-size: 20px;
+  color: #ffffff;
+  margin: 0 20px;
+  background-color: #555555;
+  padding: 3px 30px;
+  letter-spacing: 3px;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.footer__link:hover {
+  -webkit-transform: rotate(-10deg);
+      -ms-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+  -webkit-box-shadow: 0 20px 30px #000000;
+          box-shadow: 0 20px 30px #000000;
+}
+
+.footer__text {
+  text-align: center;
+  font-size: 15px;
+  color: #eeeeee;
+  letter-spacing: 2px;
+  margin-top: 50px;
+}
