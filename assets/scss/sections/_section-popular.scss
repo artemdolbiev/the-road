@@ -43,6 +43,9 @@
         width: 350px;
         margin: 30px 0;
       }
+      @include xl-xs {
+        margin: 30px 0;
+      }
       @include xs {
         margin: 30px 0;
       }
