@@ -39,7 +39,7 @@
       position: relative;
       perspective: 1500px;
 
-      @include xl-xs {
+      @include xl-min {
         width: 350px;
         margin: 30px 0;
       }

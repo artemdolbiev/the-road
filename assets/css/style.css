@@ -916,6 +916,10 @@ html {
 }
 
 @media (min-width: 1200px) {
+  .popular-content__cards {
+    width: 350px;
+    margin: 30px 0;
+  }
   .stories-wrapper__bg {
     width: 70%;
   }
@@ -930,13 +934,6 @@ html {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-}
-
-@media (max-width: 1199.8px) and (min-width: 460px) {
-  .popular-content__cards {
-    width: 350px;
-    margin: 30px 0;
   }
 }
 
