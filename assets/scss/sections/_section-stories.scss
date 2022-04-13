@@ -11,36 +11,67 @@
       background-color: rgba(238, 238, 238, 0.8);
       padding: 50px;
       margin: 50px;
-      width: 70%;
       box-shadow: 0 20px 50px rgba(51, 51, 51, 0.4);
       transform: skewX(20deg);
+
+      @include xl-min {
+        width: 70%;
+      }
+      @include xl-lg {
+        width: 85%;
+      }
+      @include lg {
+        width: 85%;
+        transform: skewX(0);
+      }
     }
   }
 
   &-block {
     transform: skewX(-20deg);
     display: flex;
+
+    @include lg {
+      transform: skewX(0);
+      flex-direction: column;
+      align-items: center;
+    }
     &__image {
       width: 200px;
       height: 200px;
       border-radius: 50%;
       object-fit: cover;
       margin-right: 50px;
+
+      @include lg{
+        margin-bottom: 30px;
+      }
     }
   }
 
   &-content {
     letter-spacing: 1px;
     &__title {
-      font-size: 25px;
       text-transform: uppercase;
       color: $color-grey;
       margin-bottom: 10px;
+
+      @include md-min {
+        font-size: 25px;
+      }
+      @include md {
+        font-size: 20px;
+      }
     }
 
     &__text {
-      font-size: 18px;
       color: $color-grey-light;
+      @include md-min {
+        font-size: 18px;
+      }
+      @include md {
+        font-size: 14px;
+      }
       &::first-letter {
         margin-left: 10px;
       }

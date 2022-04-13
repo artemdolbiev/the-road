@@ -7,6 +7,12 @@
   justify-content: center;
   align-items: center;
   perspective: 1000px;
+  @include sm-min {
+    height: calc(100vh - 70px);
+  }
+  @include sm {
+    height: 100vh;
+  }
 
   &-content {
     text-align: center;
@@ -14,17 +20,39 @@
     letter-spacing: 1px;
     text-shadow: 2px 4px $color-grey;
 
+    @include lg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+    }
+
     &__title {
-      font-size: 80px;
       color: $color-white;
+
+      @include lg-min {
+        font-size: 80px;
+      }
+      @include lg {
+        font-size: 60px;
+      }
     }
 
     &__text {
-      font-size: 30px;
       font-weight: 500;
       color: $color-secondary;
       max-width: 700px;
       margin: auto;
+      @include lg-min {
+        font-size: 30px;
+      }
+      @include lg-md {
+        font-size: 25px;
+      }
+      @include md {
+        display: none;
+      }
     }
 
     &__img {
@@ -38,22 +66,36 @@
   &-logo {
     position: absolute;
     top: 40px;
-    right: 40px;
+
+    @include xs-min {
+      right: 40px;
+    }
+    @include xs {
+      right: 18px;
+    }
 
     &__title {
       display: flex;
     }
 
     &__title span {
-      font-size: 20px;
       font-weight: 900;
       color: $color-primary;
       text-transform: uppercase;
       background-color: $color-white;
-      width: 35px;
-      height: 35px;
-      margin: 5px;
       border-radius: 50%;
+      @include xs-min {
+        font-size: 20px;
+        width: 35px;
+        height: 35px;
+        margin: 5px;
+      }
+      @include xs {
+        font-size: 16px;
+        width: 25px;
+        height: 25px;
+        margin: 3px;
+      }
 
       &:nth-child(1) {
         animation-name: drop-letters;

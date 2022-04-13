@@ -20,9 +20,15 @@ html {
 
 .container {
   background-color: $color-secondary;
-  margin: 35px;
   box-shadow: 0 10px 30px $color-grey;
   overflow: hidden;
+
+  @include sm-min {
+    margin: 35px;
+  }
+  @include sm {
+    margin: 0;
+  }
 }
 
 .wrapper_img {

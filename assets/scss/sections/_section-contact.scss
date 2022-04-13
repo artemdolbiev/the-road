@@ -7,23 +7,47 @@
   background-size: cover;
   animation: contact-bg 35s infinite;
   &__title {
-    font-size: 70px;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 5px;
     color: $color-white;
     text-shadow: 0 10px 20px $color-black;
+
+    @include md-min {
+      font-size: 70px;
+      letter-spacing: 5px;
+    }
+    @include md-xs {
+      font-size: 50px;
+      letter-spacing: 5px;
+    }
+    @include xs {
+      font-size: 40px;
+      letter-spacing: 4px;
+    }
   }
 
   &__form {
-    width: 700px;
-    height: 500px;
     background-color: rgba(255, 255, 255, 0.95);
     margin: auto;
     flex-direction: column;
     border-radius: 5px;
     box-shadow: 0 10px 30px $color-black;
-    padding: 50px;
+
+    @include md-min {
+      width: 700px;
+      height: 500px;
+      padding: 50px;
+    }
+    @include md-sm {
+      width: 90%;
+      height: 500px;
+      padding: 50px;
+    }
+    @include sm {
+      width: 90%;
+      height: 400px;
+      padding: 20px;
+    }
   }
 
   &__input {
@@ -52,10 +76,15 @@
 
   &__inputs {
     width: 100%;
-    display: flex;
     justify-content: space-between;
+
+    @include xs-min {
+      display: flex;
+    }
     & .contact__input {
-      width: 48.5%;
+      @include xs-min {
+        width: 48.5%;
+      }
     }
   }
 

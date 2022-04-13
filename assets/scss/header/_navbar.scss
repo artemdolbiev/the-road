@@ -1,0 +1,142 @@
+.navbar {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3));
+  background: url(../img/navbar-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+
+  &-icon {
+    width: 55px;
+    height: 55px;
+    background-color: $color-white;
+    border-radius: 50%;
+    cursor: pointer;
+    flex-direction: column;
+
+    & .line {
+      height: 2px;
+      width: 35px;
+      background-color: $color-grey;
+    }
+  }
+
+  &-wrapper {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.7);
+    position: fixed;
+    left: 0;
+    bottom: -100%;
+    opacity: 0;
+    z-index: 300;
+    transition: bottom 0.5s, opacity 0.2s;
+    @include sm-min {
+      padding: 35px 35px 35px 35px;
+    }
+    @include sm-min {
+      padding: 0;
+    }
+  }
+
+  &__list {
+    height: 100%;
+    display: flex;
+
+    @include lg {
+      flex-direction: column;
+    }
+  }
+
+  &__link {
+    font-size: 30px;
+    font-weight: 700;
+    color: $color-white;
+    text-transform: uppercase;
+    width: 100%;
+    opacity: 0.8;
+    position: relative;
+    top: -100%;
+    transition: all 0.5;
+    @include lg {
+      flex-grow: 1;
+    }
+
+
+    &:hover {
+      opacity: 1;
+      color: $color-primary;
+    }
+  }
+}
+
+.open-navbar__icon {
+  position: fixed;
+  z-index: 15;
+
+  @include sm-min {
+    top: 65px;
+    left: 65px;
+  }
+  @include sm {
+    top: 25px;
+    left: 25px;
+  }
+
+  & .line {
+    margin: 3px 0;
+  }
+}
+
+.close-navbar__icon {
+  position: absolute;
+  top: 25px;
+  z-index: 40;
+  @include sm-min {
+    right: 30px;
+  }
+  @include sm {
+    right: 40px;
+  }
+
+  & .line {
+    position: absolute;
+  }
+}
+
+.line-1 {
+  transform: rotate(40deg);
+}
+
+.line-2 {
+  transform: rotate(-40deg);
+}
+
+.change .navbar-wrapper {
+  bottom: 0;
+  opacity: 1;
+  transition: bottom 0.5s, opacity 0.2s, 0.25s;
+}
+
+.change .navbar__link {
+  top: 0;
+
+  &:nth-child(1) {
+    transition: top 1s 0.4s, opacity 0.3s, color 0.3s;
+  }
+  &:nth-child(2) {
+    transition: top 1s 0.6s, opacity 0.3s, color 0.3s;
+  }
+  &:nth-child(3) {
+    transition: top 1s 0.8s, opacity 0.3s, color 0.3s;
+  }
+  &:nth-child(4) {
+    transition: top 1s 1s, opacity 0.3s, color 0.3s;
+  }
+  &:nth-child(5) {
+    transition: top 1s 1.2s, opacity 0.3s, color 0.3s;
+  }
+}

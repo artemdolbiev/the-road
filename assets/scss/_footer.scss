@@ -5,6 +5,11 @@
   &__list {
     display: flex;
     justify-content: center;
+
+    @include md {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__link {
@@ -12,9 +17,19 @@
     color: $color-white;
     margin: 0 20px;
     background-color: $color-grey;
-    padding: 3px 30px;
     letter-spacing: 3px;
     transition: all 0.2s;
+    @include lg-min {
+      padding: 3px 30px;
+    }
+    @include lg-md {
+      padding: 3px 20px;
+      margin: 0 10px;
+    }
+    @include md {
+      padding: 3px 20px;
+      margin: 10px 0;
+    }
     &:hover {
       transform: rotate(-10deg);
       box-shadow: 0 20px 30px $color-black;
